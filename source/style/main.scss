@@ -15,8 +15,20 @@ html, body {
   margin: 0;
 }
 
+.hamburger-container {
+  display: none;
+}
+
+.desktop-hide {
+  display: none;
+}
+
+.desktop-show {
+  display: block;
+}
+
 .index-screen{
-  background-image: url(../assets/studio2.png); 
+  background-image: url(../assets/studio.png); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -44,6 +56,7 @@ html, body {
       color: white;
       margin: 0 0 5px;
       font-size:70px;
+    
 
     }
   
@@ -74,54 +87,60 @@ html, body {
     width: 100%;
     padding-left: 7px;
     box-sizing:border-box;
-  }
-  
-  i {
-    color: white;
-    padding-top: 2px;
-    padding-left: 10px;
-    font-size: 30px;
-    position: relative;
-    top: 3px;
-  }
-  
-  .navbar-title {
-    font-weight: 500;
-    letter-spacing: 4px;
-    word-spacing: 0px;
-    color: white;
-    padding: 12px 0px 12px 7px;
-    margin: 0;
-    display:inline-block;
-    font-size: 25px;
-  }
-  
-  .navbar-links {
-    display:inline-block;
-    padding: 18px 10px 0px 0px;
-    float: right;
-    vertical-align:top;
-    margin: 0;
-    
-    .slash {
-      display:inline-block;
-      color:white;
-      font-weight: 100;
-    }
-    
-    .link {
-      display:inline-block;
-      font-weight: 800;
-      margin: 0px 7px;
-      a {
-        text-decoration: none;
-        color: $grey-text;
-      }
-      a:hover {
-        color: white;
-      }
 
+  
+    i {
+      color: white;
+      padding-top: 2px;
+      padding-left: 10px;
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+  }
+    
+    .navbar-title {
+      font-weight: 500;
+      letter-spacing: 4px;
+      word-spacing: 0px;
+      color: white;
+      padding: 12px 0px 12px 7px;
+      margin: 0;
+      display:inline-block;
+      font-size: 25px;
+  }
+    
+    .navbar-links {
+      display:inline-block;
+      padding: 18px 10px 0px 0px;
+      float: right;
+      vertical-align:top;
+      margin: 0;
+      
+      .slash {
+        display:inline-block;
+        color:white;
+        font-weight: 100;
+      }
+      
+      .link {
+        display:inline-block;
+        font-weight: 800;
+        margin: 0px 7px;
+        a {
+          text-decoration: none;
+          color: $grey-text;
+        }
+        a:hover {
+          color: white;
+        }
+  
+      }
     }
+    
+    .spacer {
+      clear:both;
+    }
+    
   }
 }
 
@@ -145,7 +164,7 @@ html, body {
 }
 
 .news-background {
-  background-image: url(../assets/studio2.png); 
+  background-image: url(../assets/studio.png); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -192,6 +211,7 @@ html, body {
   //width: 100%;
   background-color:white ;
   padding-top: 80px;
+  min-height: 500px;
     
   .content-column {
     position:relative;
@@ -339,13 +359,13 @@ html, body {
     @extend .artist;
     
     .picture {
-      background-image: url(../assets/studio2.png); 
+      background-image: url(../assets/studio.png); 
     }
     
     .info {
       .show-underline {
         @extend .artist-underline;
-        width: 200px;
+        //width: 200px;
       }
     }
   }
@@ -379,8 +399,187 @@ html, body {
       display: none;
     }
     
-    h3 {
+    .navbar-title {
       display: none;
     }
   }
+}
+
+
+///////////////////////////////
+///MOBILE
+//////////////////////////////
+
+@media (max-width: 800px) { // makes them block for mobile display
+
+  
+  // HOME
+  
+  .desktop-hide {
+    display: block;
+  }
+  
+  .desktop-show {
+    display: none;
+  }
+  
+  .index-screen{
+    padding-top: 200px;
+    
+    .center-container {
+      display: block;
+      position: static;
+      width: 300px;
+      margin: auto;
+      transform: none;
+      
+      .center-text {
+        line-height: 60px;
+
+
+      }
+      
+      .icon-container {
+        i {
+          font-size: 56px;
+          padding: 0px 6px;
+        }
+      }
+  
+    }
+  }
+  
+  
+  //OTHER
+  
+  .news-background {
+    background-image: none;
+  }
+  
+  .hamburger-container { //shows hamburger
+      background-color: #272727;
+      border-radius: 3px;
+      padding: 3px 6px;
+      width: 37px;
+      display: inline-block;
+      margin-right: 7px;
+      margin-top: 8px;
+      border: 1px solid white;
+      float: right;
+      
+    
+    .line {
+      border: 1px solid white;
+      margin: 5px 2px;
+    }
+    
+  }
+  
+  .navigation-container {
+    //display:table-cell;
+    height:initial;
+    
+    .navigation {
+      padding-left: 0px;
+      
+      i {
+        padding-left: 11px;
+      }
+    
+      .navbar-links {
+        display: none;
+        width: 100%;
+        background-color: $charcoal;
+        padding: 15px 10px 10px 10px;
+        
+        -moz-box-shadow:    inset  0  8px 8px -8px black, 
+                            inset  0 -8px 8px -8px black;
+        -webkit-box-shadow: inset  0  8px 8px -8px black, 
+                            inset  0 -8px 8px -8px black;
+         box-shadow:        inset  0  8px 8px -8px black, 
+                            inset  0 -8px 8px -8px black;
+        
+        .slash {
+          display: none;
+        }
+        
+        .link {
+          display: block;
+          padding: 0px 10px 10px 0px;
+          font-size: 18px;
+        }
+        
+      }
+      
+    }
+  }
+  
+  .cover-picture {
+    padding-top: 150px; 
+    background-image: url(../assets/studio.png); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 330px;
+    
+    .center-text-page {
+      text-align: center;
+      display: block;
+      width: 200px;
+      margin: auto;
+      position: static;
+      transform: none;
+      font-size: 60px;
+    }
+      
+  }
+    
+  .content-container {
+    
+    .content-column {
+      padding-left: 20px;
+      padding-right: 20px;
+      .content-title {
+        font-size: 65px;
+      }
+      
+      .content-body {
+        font-size: 18px;
+      }
+    }
+    
+    .side-column {
+      display: none;
+    }
+    
+    .one-column {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  .artists-container {
+    .artist {
+      width:100%;
+      height: initial;
+      .picture {
+        height: 70px;
+        width: 70px;
+      }
+      .info {
+        width: initial;
+        height: initial;
+      }
+    }
+  }
+  
+  .footer {
+    padding-bottom: 20px;
+  }
+  .navigation-container-footer {
+    display: none;
+  }
+  
 }
