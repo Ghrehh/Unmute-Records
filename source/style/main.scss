@@ -434,7 +434,7 @@ html, body {
       
     }
   }
-}
+} //sets the content container width to 100% and hides twitter at 1000px as the bootstrap changes at that point and breaks some stuff. 
 
 @media (max-width: 940px) {
   .index-screen {
@@ -446,10 +446,15 @@ html, body {
   }
 } //front page font
 
-@media (max-width: 800px) { // makes them block for mobile display
+@media (max-width: 800px) { 
 
   
   // HOME
+  
+  .is-home-page { //makes the homepage only 100% tall and hides the overflow
+    height: 100%;
+    overflow: hidden;
+  }
   
   .desktop-hide {
     display: block;

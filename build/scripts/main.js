@@ -16,14 +16,14 @@ function centerVertical(parent, subject) {
   
   var padding_amount = (parent_height - subject_height) / 2;
   
-  if ($(".is-home-page").height()){
+  if ($(".is-home-page").height()){ // is a dirty fix for mobile, tried using a script to adjust height but typekit loading fucks with it. Only loads on homepage
     console.log("is home page");
-    padding_amount = padding_amount - 25;
+    padding_amount = padding_amount;
   }
   
   console.log("subject height: " + subject_height);
   console.log("parent height: " + parent_height);
-  $(parent).css( "paddingTop", padding_amount); // -25 is a dirty fix for mobile, tried using a script to adjust height but typekit loading fucks with it
+  $(parent).css( "paddingTop", padding_amount); 
 }
 
 function isMobile() {
