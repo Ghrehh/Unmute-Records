@@ -451,25 +451,6 @@ html, body {
   
   // HOME
   
-  .hamburger-container { //shows hamburger
-      background-color: #272727;
-      border-radius: 3px;
-      padding: 3px 6px;
-      width: 37px;
-      display: inline-block;
-      margin-right: 7px;
-      margin-top: 8px;
-      border: 1px solid white;
-      float: right;
-      
-    
-    .line {
-      border: 1px solid white;
-      margin: 5px 2px;
-    }
-    
-  }
-  
   .desktop-hide {
     display: block;
   }
@@ -491,6 +472,7 @@ html, body {
       .center-text {
         line-height: 60px;
         font-size: 70px;
+        text-align:center;
 
 
       }
@@ -506,7 +488,27 @@ html, body {
   }
   
   
+  
   //OTHER
+  
+  .hamburger-container { //shows hamburger
+      background-color: #272727;
+      border-radius: 3px;
+      padding: 3px 6px;
+      width: 37px;
+      display: inline-block;
+      margin-right: 7px;
+      margin-top: 8px;
+      border: 1px solid white;
+      float: right;
+      
+    
+    .line {
+      border: 1px solid white;
+      margin: 5px 2px;
+    }
+    
+  }
   
   .news-background {
     background-image: none;
