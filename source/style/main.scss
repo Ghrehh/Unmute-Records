@@ -410,6 +410,42 @@ html, body {
 ///MOBILE
 //////////////////////////////
 
+@media (max-width: 1100px) {
+  .index-screen {
+    .center-container {
+      .center-text {
+        font-size: 60px;
+      }
+    }
+  }
+} //front page font
+
+@media (max-width: 1000px) {
+  .white-background {
+    .content-container {
+      width: 750px;
+      .content-column {
+        width: 100%;
+      }
+      
+      .side-column {
+        display: none;
+      }
+      
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .index-screen {
+    .center-container {
+      .center-text {
+        font-size: 45px;
+      }
+    }
+  }
+} //front page font
+
 @media (max-width: 800px) { // makes them block for mobile display
 
   
@@ -435,6 +471,7 @@ html, body {
       
       .center-text {
         line-height: 60px;
+        font-size: 70px;
 
 
       }
