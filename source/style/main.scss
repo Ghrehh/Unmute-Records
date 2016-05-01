@@ -390,6 +390,7 @@ html, body {
   .show {
     @extend .artist;
     
+    
     .picture {
       background-image: url(../assets/studio.png); 
     }
@@ -400,6 +401,11 @@ html, body {
         //width: 200px;
       }
     }
+  }
+  
+  .show:hover {
+    background-color: #E4E4E4;
+    cursor: default;
   }
 }
 
@@ -660,14 +666,18 @@ html, body {
   }
   
   .artists-container {
+    
     .artist {
       width:100%;
       height: initial;
+      padding: 5px;
+      
       .picture {
         width: 100%;
         height:initial;
         display: inline-block;
         margin: 0px;
+        
       }
       .info {
         .icons-container {
